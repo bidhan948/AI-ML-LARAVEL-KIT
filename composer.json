@@ -1,20 +1,20 @@
 {
-  "name": "bidhan/aimlkit",
-  "description": "AI/ML Integration Kit for Laravel",
-  "type": "library",
-  "require": {
-      "php": "^8.0"
-  },
-  "autoload": {
-      "psr-4": {
-          "Bidhan\\AiMlKit\\": "src/"
-      }
-  },
-  "authors": [
-      {
-          "name": "Bidhan Baniya",
-          "email": "bidhanbaniya789@gmail.com"
-      }
-  ],
-  "license": "MIT"
+    "name": "bidhan/aimlkit",
+    "description": "AI/ML Integration Kit for Laravel",
+    "type": "library",
+    "require": {
+        "php": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bidhan\\AiMlKit\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Bidhan Baniya",
+            "email": "bidhanbaniya789@gmail.com"
+        }
+    ],
+    "license": "MIT"
 }
