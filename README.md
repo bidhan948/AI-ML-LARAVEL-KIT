@@ -16,7 +16,7 @@ To install the package, follow these steps:
 1. **📦 Install the package using Composer**:
 
     ```sh
-    composer require bidhan/aimlkit
+    composer require bidhan/aimlkit:dev-master
     ```
 
 2. **⚙️ Publish the configuration file**:
