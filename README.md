@@ -1,18 +1,31 @@
-
 # bidhan/aimlkit
 
 AI/ML Integration Kit for Laravel
 
+## REQUIREMENTS
 
-## REQUIREMENT
+- PHP >= 8.0
+- Python >= 3 (with libraries: numpy, pandas, transformers, torch)
 
-- PHP>=8.2
-- PYTHON>=3 (It's AI library numpy, pandas tranformers torch)
+## Installation
+
+To install the package, follow these steps:
+
+1. **Install the package using Composer**:
+
+    ```sh
+    composer require bidhan/aimlkit
+    ```
+
+2. **Publish the configuration file**:
+
+    ```sh
+    php artisan vendor:publish --provider="Bidhan\AiMlKit\AiMlKitServiceProvider" --tag=config
+    ```
 
 ## Authors
 
 - [@bidhan948](https://github.com/bidhan948)
 
-
 ## 🚀 PS*
-Right now it is on the Development Phase and you are free to contribute :)
+Right now it is in the Development Phase and you are free to contribute :)
