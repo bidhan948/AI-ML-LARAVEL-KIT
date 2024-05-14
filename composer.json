@@ -3,7 +3,7 @@
   "description": "AI/ML Integration Kit for Laravel",
   "type": "library",
   "require": {
-      "php": "^7.3|^8.0"
+      "php": "^8.0"
   },
   "autoload": {
       "psr-4": {
