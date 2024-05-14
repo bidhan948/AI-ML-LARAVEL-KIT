@@ -34,6 +34,18 @@ To install the package, follow these steps:
 
 > **Note:** To copy the commands, you can click the clipboard icon next to each code block if you're viewing this on a platform that supports it, like GitHub.
 
+## 📖 Usage
+
+Here is an example of how to use the `BidhanAIMLKIT` to get sentiments:
+
+```php
+use Bidhan\AiMlKit\BidhanAIMLKIT;
+
+$aimlkit = new BidhanAIMLKIT();
+$sentiment = $aimlkit->getSentiments("ANY_STRING...");
+print_r($sentiment);
+```
+
 ## 👤 Authors
 
 - [@bidhan948](https://github.com/bidhan948)
