@@ -1,23 +1,32 @@
 import sys
 import time
 import json
+import warnings
 from transformers import pipeline
 
-# Load the sentiment-analysis pipeline
-nlp = pipeline("sentiment-analysis")
+# Suppress specific warnings
+warnings.filterwarnings("ignore", message="Some weights of the model checkpoint")
+warnings.filterwarnings("ignore", message="`resume_download` is deprecated")
+
+sentiment_nlp = pipeline("sentiment-analysis", model="distilbert-base-uncased-finetuned-sst-2-english")
 
 def analyze_sentiment(text):
     try:
         start_time = time.time()
-        result = nlp(text)[0]
+        sentiment_result = sentiment_nlp(text)[0]
         end_time = time.time()
-        result.update({
+        
+        result = {
             "text": text,
-            "processing_time": f"{end_time - start_time:.2f}s"
-        })
+            "sentiment": sentiment_result["label"],
+            "sentiment_score": float(sentiment_result["score"]),
+            "processing_time": f"{end_time - start_time:.2f}s",
+            "word_count": len(text.split()),
+            "char_count": len(text)
+        }
+        
         return json.dumps(result)
     except Exception as e:
-        logging.error(f"Error processing text: {e}")
         return json.dumps({"error": str(e)})
 
 if __name__ == '__main__':
