@@ -1,10 +1,8 @@
-Sure! Here is the updated documentation with the additional step to set the Python path:
-
 # bidhan/aimlkit
 
 AI/ML Integration Kit for Laravel
 
-![GitHub version](https://img.shields.io/badge/version-1.0-brightgreen)
+![GitHub version](https://img.shields.io/badge/version-1.0.1-brightgreen)
 
 ## REQUIREMENTS
 
@@ -36,7 +34,7 @@ To install the package, follow these steps:
 
 4. **🔧 Set the Python executable path**:
    
-   Don't forget to add the Python path to your aimlkit.php configuration:
+   Don't forget to add the Python path to your `aimlkit.php` configuration:
    
     ```env
     PY_EXECUTABLE_PATH="YOUR/PYTHON/PATH"
