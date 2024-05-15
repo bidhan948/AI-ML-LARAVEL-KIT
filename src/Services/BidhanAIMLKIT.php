@@ -12,7 +12,17 @@ class BidhanAIMLKIT
             $output = null;
             $retval = null;
             exec(config("aimlkit.PY_EXECUTABLE_PATH") . " " . base_path($this->PY_SRC) . " " . escapeshellarg($text), $output, $retval);
-            return json_decode($output[0], true);
+
+            $jsonOutput = implode("\n", $output);
+
+            $resultArray = json_decode($jsonOutput, true);
+
+            if (json_last_error() === JSON_ERROR_NONE) {
+                return $resultArray;
+            } else {
+                info("JSON decoding error: " . json_last_error_msg());
+                return "Error decoding JSON: " . json_last_error_msg();
+            }
         } catch (\Exception $e) {
             info($e->getMessage());
             return $e->getMessage();
